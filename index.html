@@ -58,24 +58,49 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
-<script>
-  window.addEventListener('keydown',function(e){
-   const audio=document.querySelector('audio[data-key="'+e.keyCode+'"]');
-   const key=document.querySelector('.key[data-key="'+e.keyCode+'"]');
-   if(!audio) return;//stop functioning from running
-   audio.currentTime=0;//rewind to start
-   audio.play();
-   key.classList.add('playing');
-  });
-  const keys=document.querySelectorAll('.key');
-  keys.forEach(key=>{
-    key.addEventListener('transitionend',function(){
-      this.classList.remove('playing');
-
+  <script>
+    // Function to handle keydown and click events
+    function handleEvent(e) {
+      let keyCode;
+      if (e.type === 'keydown') {
+        keyCode = e.keyCode;
+      } else if (e.type === 'click') {
+        keyCode = e.target.getAttribute('data-key');
+      }
+      
+      const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+      const key = document.querySelector(`.key[data-key="${keyCode}"]`);
+      
+      if (!audio || !key) return; // Stop functioning if no audio or key is found
+      
+      audio.currentTime = 0; // Rewind to start
+      audio.play();
+      key.classList.add('playing');
+    }
+  
+    // Attach keydown event listener
+    window.addEventListener('keydown', handleEvent);
+  
+    // Attach click event listener to the entire document and delegate to letter elements
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('key')) {
+        handleEvent(e);
+      }
     });
-  });
-
-</script>
+  
+    // Function to remove the 'playing' class after transition
+    function removePlayingClass(e) {
+      if (e.propertyName !== 'transform') return; // Skip if it's not a transform transition
+      this.classList.remove('playing');
+    }
+  
+    // Attach transitionend event listeners to the letters
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+      key.addEventListener('transitionend', removePlayingClass);
+    });
+  </script>
+  
 
 
 </body>
