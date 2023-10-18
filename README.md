@@ -2,7 +2,7 @@
 
 Welcome to the Drums & Beats Playground – where rhythm and fun collide! 🥁🎉
 
-**Link to the Live Drum Kit**: [Play the Drums](https://yourdrumkitwebsite.com)
+**Link to the Live Drum Kit**: [Play the Drums](https://lumena07.github.io/Drumss/)
 
 Unleash your inner drummer and make some noise with our virtual drum kit. Whether you're a professional percussionist or just drumming up some good vibes, this is the place to jam out!
 
@@ -16,14 +16,14 @@ Unleash your inner drummer and make some noise with our virtual drum kit. Whethe
 
 ## 🎵 How to Drum
 
-1. Head over to [the Drum Kit](https://yourdrumkitwebsite.com).
+1. Head over to [the Drum Kit](https://lumena07.github.io/Drumss/).
 2. Click or tap the drum pieces to play your desired beat.
 3. Mix and match drums to create unique rhythms.
 4. Record your masterpiece and share it with the world!
 
 ## 🔧 Installation
 
-No installation required – we're just a click away! Simply visit our [Drum Kit](https://yourdrumkitwebsite.com) and let the drumming begin.
+No installation required – we're just a click away! Simply visit our [Drum Kit](https://lumena07.github.io/Drumss/) and let the drumming begin.
 
 ## 🙌 Contributing
 
